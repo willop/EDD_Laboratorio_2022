@@ -52,6 +52,29 @@ public class ListaSimple {
         
     }
     
+    //metodo de graficacion con graphviz
+    public String generarDot(String _nombre){
+        String resultado="digraph G{\nlabel=\""+_nombre+"\";\nnode [shape=box];\n";
+        Nodo aux = cabecera;
+        String conexiones="";
+        String nodos="";
+        while(aux != null){
+            nodos+="N"+aux.hashCode()+"[label=\"nodo"+aux.personaje.Nombre+"\"];\n";
+            if(aux.next != null){
+                conexiones+="N"+aux.hashCode()+ " -> "+"N"+aux.next.hashCode()+";\n";
+            }
+            aux = aux.next;
+        }
+        resultado+= "//Agregando nodods\n";
+        resultado+=nodos+"\n";
+        resultado+= "//Agregando conexiones\n";
+        resultado+="{rank= same;\n"+conexiones+"\n";
+        
+        resultado+="}\n}";
+        
+        return resultado;
+    }
+    
     
     
 }

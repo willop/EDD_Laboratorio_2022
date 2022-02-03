@@ -15,8 +15,10 @@ public class EjemploLista {
         listapersonajes.InsertarFinal(p3);
         listapersonajes.InsertarFinal(p2);
         listapersonajes.InsertarFinal(p1);
+            
         
         listapersonajes.Recorrido();
-     
+        System.out.println(listapersonajes.generarDot("Ejemplo lista"));
+
     } 
 }
