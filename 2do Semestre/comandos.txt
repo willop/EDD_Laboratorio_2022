@@ -1,0 +1,3 @@
+swig -python -c++ Listasimple.i
+g++ -c -fpic Listasimple_wrap.cxx -I/usr/include/python3.8
+g++ -shared Listasimple_wrap.o -o _Listasimple.so
