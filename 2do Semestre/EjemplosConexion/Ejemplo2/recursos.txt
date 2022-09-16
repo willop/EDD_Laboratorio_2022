@@ -1,0 +1,26 @@
+c/c++ project Generator  //compilador de c++
+
+
+
+    crear mis headers en el include
+    simple.hpp
+    
+
+    src->
+    main.cpp
+    simple.cpp
+
+    include ->
+    usuario.hpp
+
+    # Error de asio.hpp en linux
+    sudo apt install --no-install-recommends libasio-dev 
+
+    ejecutamos make
+
+    para ejecutar el main ->
+    output/main
+
+    crear el archivo usuarios.json a nivel del make
+
+    para que se modifique tenemos que ejecutar el make
